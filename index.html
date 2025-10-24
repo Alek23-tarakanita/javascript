@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="EstimasiBiaya.js"></script>
+	<title>Javascript</title>
+</head>
+<body>
+	<section class="halaman-hitung">
+		<div class="hitung-container">
+			<br>
+				<h2>ESTIMASI PERHITUNGAN BIAYA</h2>
+			<br>
+
+			<div class="form-grub">
+				<label>Nama Customer :</label>
+				<input type="text" id="nama-customer">
+			</div>
+
+			<div class="form-grub">
+				<label>Menu Teh</label>
+					<select id="jenis-minuman" onchange="update_biayaminuman()">
+						<option>--Pilih Jenis Minuman--</option>
+						<option value="tehsolo-uk-kecil">1. Teh Solo Uk Kecil</option>
+						<option value="tehsolo-uk-besar">2. Teh Solo Uk Besar</option>
+						<option value="lemon-tea">3. Lemon Tea</option>
+						<option value="es-jeruk">4. Es Jeruk</option>	
+					</select>
+
+			</div>
+
+			<div class="form-grub">
+				<label>Harga Barang :</label>
+				<input type="text" id="harga-barang">
+			</div>
+
+			<div class="form-grub">
+				<label>Jumlah Barang :</label>
+				<input type="text" id="jumlah-barang">
+			</div>
+			<div class="tombol">
+				<button onclick="hitung_biaya()">Hitung Total Biaya</button>
+				<button onclick="hapus_data()">Hapus</button>
+			</div>
+
+			
+			<div id="hasil"></div>
+		</div>
+	</section>
+
+</body>
+</html>
